@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import AutoCompleteSearch from './components/AutoCompleteSearch';
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    document.title = "Yuri's Page";
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center justify-center w-screen min-h-screen text-gray-700 p-10 bg-gradient-to-br from-pink-200 via-purple-200 to-indigo-200 ">
+	    <div className="w-full max-w-screen-sm bg-white p-10 rounded-xl ring-8 ring-white ring-opacity-40">
+        <AutoCompleteSearch />
+      </div>
     </div>
   );
 }
